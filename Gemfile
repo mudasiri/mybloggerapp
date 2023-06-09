@@ -27,8 +27,8 @@ gem "stimulus-rails"
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 gem "jbuilder"
 
-# Add PG
-gem "pg"
+# Add PG as active record adapter
+gem 'pg', '~> 1.1'
 
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
@@ -73,3 +73,5 @@ group :test do
   gem "selenium-webdriver"
   gem "webdrivers"
 end
+
+gem 'rubocop', '>= 1.0', '< 2.0'
