@@ -6,6 +6,5 @@ class CreateComment < ActiveRecord::Migration[7.0]
       t.string :text
       t.timestamps
     end
-    add_reference :comments, :author, column: :author_id, null: false, foreign_key: { to_table: :users }
   end
 end

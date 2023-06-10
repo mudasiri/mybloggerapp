@@ -9,6 +9,5 @@ class CreatePost < ActiveRecord::Migration[7.0]
       t.integer :likes_counter
       t.timestamps
     end
-    add_reference :posts, :author, column: :author_id, null: false, foreign_key: { to_table: :users }
   end
 end
