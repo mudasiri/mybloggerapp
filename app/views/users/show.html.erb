@@ -1,10 +1,26 @@
-<h1>Show user details</h1>
+<head>
+  <%= stylesheet_link_tag 'style' %>
+</head>
+
+<section class="section">
 
 <% if @user.nil? %>
-<h2>User not found</h2>
+  <h4>User not found</h4>
 <% else %>
-<% @user.posts.each do |post| %>
-    <h4><%= post.title %></h4>
-    <p><%= post.text %></p>
-  <% end %>
+<div>
+  <%= render 'user', user: @user %>
+<div>
+
+<%= render 'bio' %>
+
+<ul>
+<% @user.three_most_recent_posts.each do |post| %>
+  <%= render 'post', post: post %>
 <% end %>
+</ul>
+
+<% end %>
+<div class="button">
+  <button type="button"><%= link_to "See all posts", user_posts_path(user_id: @user.id) %></button>
+</div>
+</section>

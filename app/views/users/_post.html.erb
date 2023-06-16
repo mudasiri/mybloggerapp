@@ -1,0 +1,11 @@
+<li class="post">
+    <h4 class="small-heading">
+        <%= link_to "Post ##{post.id}", user_post_path(post.author_id, post.id) %>
+    </h4>
+    <% if post.text.present? && post.text.length > 200 %>
+        <p><%= post.text.first(150)... %></p>
+    <% else %>
+        <p><%= post.text %></p>
+    <% end %>
+    <p class="comment-heading">Comments: <%= post.comments_counter%>, Likes: <%= post.likes_counter %></p>
+</li>
