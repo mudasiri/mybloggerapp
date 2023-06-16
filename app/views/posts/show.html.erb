@@ -1,8 +1,16 @@
 <section class="section">
-    <%= render 'post', post: @post %>
-    <% if @post.comments_counter > 0 %>
+
+<div class="button">
+<button type="button">
+<%= link_to "Add a comment", new_user_post_comment_path(@user, @post) %>
+</button>
+</div>
+
+<%= render 'post', post: @post %>
+
+<% if @post.comments_counter > 0 %>
           <% @post.comments.each do |comment| %>
             <%= render 'comments', comment: comment, user: @user %>
             <% end %>
-          <% end %>
+    <% end %>
 </section>
