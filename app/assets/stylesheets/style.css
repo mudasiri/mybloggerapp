@@ -1,0 +1,219 @@
+:root {
+    --primary: #f8ede3;
+    --primary-light: #f9f1e9;
+    --secondary: #635f5b;
+    --secondary-tint: #958e88;
+    --tertiary: #85586f;
+    --tertiary-lightest: #b69ba9;
+    --font-main-family:
+      'Calibre',
+      'Inter',
+      sans-serif;
+    --font-mono-family:
+      'SF Mono',
+      'Roboto Mono',
+      monospace;
+    --fs-l: 18px;
+    --fs-m: 16px;
+    --border-radius: 5px;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    box-sizing: inherit;
+  }
+  
+  body {
+    font-family: var(--font-main-family);
+    font-size: var(--fs-l);
+    background-color: var(--primary);
+    width: 100%;
+    min-width: 100%;
+    overflow-x: hidden;
+    margin: 0;
+    line-height: 1.2;
+  }
+  
+  #header {
+    padding: 10px 25px;
+    width: 100%;
+    height: 50px;
+    background-color: var(--primary);
+    opacity: 0.8;
+  }
+  
+  main {
+    margin: 0 auto;
+    padding: 0 10%;
+  }
+  
+  section {
+    margin-top: 60px;
+  }
+  
+  .user {
+    display: flex;
+    height: 120px;
+    justify-content: center;
+    border-radius: 5px;
+    margin-bottom: 20px;
+  }
+  
+  .user-details {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(150px, 220px));
+    margin-left: 70px;
+    border: 1px solid var(--secondary);
+    border-radius: var(--border-radius);
+  }
+  
+  .heading-container {
+    margin-left: 80px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .post {
+    border: 1px solid var(--secondary);
+    border-radius: var(--border-radius);
+    padding: 10px 20px 10px 10px;
+    margin: 50px 40px 0 0;
+  }
+  
+  .post-counter-details {
+    display: flex;
+    align-items: end;
+  }
+  
+  a {
+    display: inline-block;
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  a:hover {
+    color: var(--secondary);
+  }
+  
+  img {
+    width: 100%;
+    min-width: 100%;
+    height: 100%;
+    vertical-align: middle;
+  }
+  
+  img:hover {
+    transform: translateY(-3px);
+  }
+  
+  .bio {
+    border-radius: 5px;
+    border: 1px solid var(--secondary);
+    padding: 20px;
+  }
+  
+  button {
+    cursor: pointer;
+    color: var(--secondary);
+    background-color: transparent;
+    border: 1px solid var(--secondary);
+    border-radius: var(--border-radius);
+    padding: 10px 15px;
+    font-size: var(--fs-xs);
+    font-family: var(--font-mono-family);
+    line-height: 1;
+    text-decoration: none;
+    transition: var(--transition);
+  }
+  
+  .flex-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  button:hover {
+    background-color: var(--secondary-tint);
+    outline: none;
+  }
+  
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin: 0 0 10px 0;
+    font-weight: 600;
+    line-height: 1.1;
+    color: var(--tertiary-lightest);
+  }
+  
+  p {
+    text-align: justify;
+    color: var(--secondary);
+  }
+  
+  .button {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .medium-heading {
+    font-size: var(--fs-xl);
+  }
+  
+  .small-heading {
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin: 10px 0 40px;
+    width: 100%;
+    font-size: var(--fs-m);
+  }
+  
+  .comment-heading {
+    display: flex;
+    justify-content: end;
+    position: relative;
+    width: 100%;
+    font-size: 15px;
+  }
+  
+  .comments-container {
+    display: flex;
+    justify-content: center;
+    width: 70%;
+    margin: 0 auto;
+    padding: 0 10px;
+    border: 1px solid var(--secondary);
+    border-top: none;
+    border-radius: var(--border-radius);
+  }
+  
+  .comment {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    font-size: var(--fs-m);
+    color: var(--tertiary-lightest);
+    font-family: var(--font-mono-family);
+  }
+  
+  footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: auto;
+    min-height: 70px;
+    padding: 15px;
+    text-align: center;
+  }
+  
+  ul > li {
+    list-style: none;
+  }  
