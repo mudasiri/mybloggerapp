@@ -1,7 +1,8 @@
 <div class="post">
     <h4 class="small-heading">
-    Post #<%= @post.id %> by <%= @user.name %>
+        Post #<%= @post.id %> by <%= @user.name %>
     </h4>
     <p class="comment-heading">Comments: <%= @post.comments_counter %>, Likes: <%= @post.likes_counter %></p>
+    <%= render 'form' %>
     <p><%= @post.text %></p>
 </div>

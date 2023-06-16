@@ -1,0 +1,13 @@
+<section class="flex-center">
+
+<h1 class="medium-heading">
+Adding a comment
+</h1>
+
+<%= bootstrap_form_with(model: [@post, @comment], url: user_post_comments_path, local: true, layout: :horizontal) do |form| %>
+    <br>
+    <%= form.text_area :text %>
+    <br>
+     <%= form.button "Add Comment" %>
+    <% end %>
+</section>

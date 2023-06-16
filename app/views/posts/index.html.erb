@@ -1,11 +1,17 @@
 <section class="section">
+
+
 <% if @user.nil? %>
-  <h4>User not found</h4>
+<h4>User not found</h4>
 <% else %>
 <div>
-  <%= render partial: 'users/user', locals: { user: @user } %>
+<%= render partial: 'users/user', locals: { user: @user } %>
 <div>
 <% end %>
+
+<div class="button">
+  <button type="button"><%= link_to 'Add New Post', new_user_post_path %></button>
+</div>
 
 <ul>
 <% @posts.each_with_index do |post, index| %>
@@ -19,4 +25,7 @@
   </li>
   <% end %>
 </ul>
+
+
+
 </section>
