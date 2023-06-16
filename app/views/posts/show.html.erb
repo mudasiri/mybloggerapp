@@ -1,8 +1,8 @@
-<h1>Posts show</h1>
-
-<% if @post.nil? %>
-    <h1>no post found</h1>
-<%else %>
-<h4><%= @post.title %></h4>
-<p><%= @post.text %></p>
-<% end %>
+<section class="section">
+    <%= render 'post', post: @post %>
+    <% if @post.comments_counter > 0 %>
+          <% @post.comments.each do |comment| %>
+            <%= render 'comments', comment: comment, user: @user %>
+            <% end %>
+          <% end %>
+</section>

@@ -1,0 +1,15 @@
+<li class="user">
+    <div>
+      <img src="<%= user.photo %>" alt="<%= user.name %>" >
+    </div>
+    <div class="user-details">
+        <div class="heading-container">
+            <h4 class="medium-heading">
+            <%= link_to user.name, user_path(user.id) %>
+            </h4>
+        </div>
+        <div class="post-counter-details">
+        <p>Number of posts: <%= user.posts.count %></p>
+        </div>
+    </div>
+</li>
