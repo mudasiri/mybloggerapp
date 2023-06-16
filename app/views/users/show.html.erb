@@ -1,1 +1,10 @@
 <h1>Show user details</h1>
+
+<% if @user.nil? %>
+<h2>User not found</h2>
+<% else %>
+<% @user.posts.each do |post| %>
+    <h4><%= post.title %></h4>
+    <p><%= post.text %></p>
+  <% end %>
+<% end %>

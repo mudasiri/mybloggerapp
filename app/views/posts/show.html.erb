@@ -1,1 +1,8 @@
 <h1>Posts show</h1>
+
+<% if @post.nil? %>
+    <h1>no post found</h1>
+<%else %>
+<h4><%= @post.title %></h4>
+<p><%= @post.text %></p>
+<% end %>
