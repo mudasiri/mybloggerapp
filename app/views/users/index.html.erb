@@ -1,2 +1,11 @@
-<h1>Users#index</h1>
-<p>Find me in app/views/users/index.html.erb</p>
+<h1>User Details</h1>
+
+<% @users.each do |user| %>
+    <h3><%= user.name %></h3>
+    <p>Number of posts by <%= user.name %>: <%= user.posts.count %></p>
+    <% user.posts.each do |post| %>
+      <h4><%= post.title %></h4>
+      <p><%= post.text %></p>
+    <% end %>
+<% end %>
+  
