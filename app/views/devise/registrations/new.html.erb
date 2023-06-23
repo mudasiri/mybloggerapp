@@ -1,0 +1,33 @@
+<section class="flex-center">
+
+<div class="form">
+
+<%= bootstrap_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <%= render "devise/shared/error_messages", resource: resource %>
+
+
+<%= f.text_field :name, required: true %><br />
+
+<%= f.text_field :photo, required: true  %><br />
+
+<%= f.text_area :bio, required: true  %><br />
+
+<%= f.select :role, [["user", "user"], ["admin", "admin"]]%><br />
+
+<%= f.email_field :email, autofocus: true, autocomplete: "email", required: true %><br />
+
+<% if @minimum_password_length %>
+  <%= f.password_field :password, help: "Must be at least #{@minimum_password_length} characters long", required: true %>
+<% end %><br />
+
+
+<%= f.password_field :password_confirmation, autocomplete: "new-password", required: true %><br />
+
+<%= f.button "Sign up" %>
+<% end %>
+<br />
+<%= render "devise/shared/links" %>
+
+</div>
+
+</section>

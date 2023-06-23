@@ -8,7 +8,7 @@ RSpec.feature 'User index page', type: :feature do
   scenario 'Displays name, profile picture, and post count for all users' do
     sleep(1)
     expect(page).to have_content('Clement')
-    expect(page).to have_css("img[src='https://avatars.githubusercontent.com/u/15003328?v=4']")
+    expect(page).to have_css("img[src='https://avatars.githubusercontent.com/u/53082877?s=96&v=4']")
     expect(page).to have_css('li.user div.post-counter-details p', text: 'Number of posts: 0')
     expect(page).to have_css('li.user', count: 3)
   end

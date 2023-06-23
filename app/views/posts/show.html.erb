@@ -8,9 +8,24 @@
 
 <%= render 'post', post: @post %>
 
-<% if @post.comments_counter > 0 %>
+<% if @post.comments.empty?%>
+    <h4>No comments for this post</h4>
+ <% else %>
+
           <% @post.comments.each do |comment| %>
-            <%= render 'comments', comment: comment%>
+            
+            
+
+            <div class="comments-container">
+            <p class="comment"><%= comment.author.name %> : <%= comment.text %></p>
+          
+          
+            <% if can? :destroy, comment %>
+                        <%= button_to 'Delete comment', user_post_comment_path(comment.author, @post, comment), method: :delete, data: { confirm: 'Are you sure?' } %>
+                     <% end %>
+          
+          </div>
+
             <% end %>
     <% end %>
 </section>

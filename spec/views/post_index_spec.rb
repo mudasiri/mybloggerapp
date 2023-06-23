@@ -9,9 +9,9 @@ RSpec.feature 'Post index page', type: :feature do
 
   scenario 'Displays details, posts and comments to the post for a single user' do
     sleep(1)
-    expect(page).to have_content('Mudasir')
-    expect(page).to have_css("img[src='https://avatars.githubusercontent.com/u/15003328?v=4']")
-    expect(page).to have_content('Mudasir : Good review!')
+    expect(page).to have_content('Mancoba')
+    expect(page).to have_css("img[src='https://avatars.githubusercontent.com/u/53082877?s=96&v=4']")
+    expect(page).to have_content('Mancoba : Good review!')
     expect(page).to have_css('li.user', count: 1)
     expect(page).to have_css('li.post p.comment-heading', text: 'Comments: 7, Likes: 0')
     expect(page).to have_css('li.post', count: 5)

@@ -3,6 +3,7 @@ require 'rails_helper'
 RSpec.describe 'Posts', type: :request do
   describe 'GET /index' do
     before(:example) { get('/users/14/posts') }
+
     it 'should return success status' do
       expect(response).to have_http_status(:ok)
     end
@@ -18,6 +19,7 @@ RSpec.describe 'Posts', type: :request do
 
   describe 'GET /show' do
     before(:example) { get('/users/14/posts/8') }
+
     it 'should return success status' do
       expect(response).to have_http_status(:ok)
     end
@@ -27,7 +29,7 @@ RSpec.describe 'Posts', type: :request do
     end
 
     it 'should have a body' do
-      expect(response.body).to include('Mudasir : Awesome!')
+      expect(response.body).to include('Mancoba : Awesome!')
     end
   end
 end

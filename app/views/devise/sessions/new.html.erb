@@ -1,0 +1,26 @@
+<section class="flex-center">
+
+<div class="form">
+
+<%= bootstrap_form_for(resource, as: resource_name, url: session_path(resource_name), layout: :horizontal, label_col: "col-sm-2", control_col: "col-sm-10") do |f| %>
+
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "bob@example.com" %></br>
+
+    <%= f.password_field :password, autocomplete: "current-password" %></br>
+    
+    <%= f.form_group do %>
+      <% if devise_mapping.rememberable? %>
+      <%= f.check_box :remember_me, switch: true %>
+      <% end %></br>
+    <% end %>
+
+    <%= f.form_group do %>
+      <%= f.button "Log in" %>
+    <% end %></br>
+<% end %>
+
+<%= render "devise/shared/links" %>
+
+</div>
+
+</section>
