@@ -30,6 +30,4 @@ RSpec.feature 'User show page', type: :feature do
     click_on 'Mancoba'
     expect(current_path).to eq(user_path(user.id))
   end
-
-
 end
