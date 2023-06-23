@@ -14,9 +14,23 @@
          
          <div id = "header">
             <h1>
-            <%= link_to "Blog App", root_path %>
+            <%= link_to "Blog App", users_path %>
             </h1>
+
+            <div class="user-profile">
+               <% if user_signed_in? %>
+                <h3>
+                  <%= "Hello #{current_user.name}!" %>
+               </h3>
+            <button>
+            <%= link_to "Log out", destroy_user_session_path, method: :delete %>
+             </button>
+            <% end %>   
+            </div>
          </div>
+
+         <p class="notice flex-center"><%= notice %></p>
+         <p class="alert flex-center"><%= alert %></p>
 
          <main id = "main-section">
             <%= yield -%>

@@ -9,8 +9,8 @@ RSpec.feature 'User show page', type: :feature do
 
   scenario 'Displays details and posts  for a single user' do
     sleep(1)
-    expect(page).to have_content('Mudasir')
-    expect(page).to have_css("img[src='https://avatars.githubusercontent.com/u/15003328?v=4']")
+    expect(page).to have_content('Mancoba')
+    expect(page).to have_css("img[src='https://avatars.githubusercontent.com/u/53082877?s=96&v=4']")
     expect(page).to have_css('li.user div.post-counter-details p', text: 'Number of posts: 5')
     expect(page).to have_content('Teacher from Mexico.')
     expect(page).to have_css('li.user', count: 1)
@@ -26,8 +26,8 @@ RSpec.feature 'User show page', type: :feature do
   end
 
   scenario 'Clicking on a user redirects to their same page' do
-    user = User.find_by(name: 'Mudasir')
-    click_on 'Mudasir'
+    user = User.find_by(name: 'Mancoba')
+    click_on 'Mancoba'
     expect(current_path).to eq(user_path(user.id))
   end
 

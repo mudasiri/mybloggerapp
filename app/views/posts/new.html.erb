@@ -1,7 +1,5 @@
 <section class="add-post-section flex-center">
 
-<h4>Adding New Post</h4>
-
 <%= bootstrap_form_with(model: @post, url: user_posts_path, layout: :horizontal) do |form| %>
     <br>
     <%= form.text_field :title %>
