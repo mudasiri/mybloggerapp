@@ -1,5 +1,5 @@
 class ApplicationController < ActionController::Base
-    layout 'standard'
+  layout 'standard'
 
   def current_user
     User.first

@@ -10,7 +10,7 @@
 
 <% if @post.comments_counter > 0 %>
           <% @post.comments.each do |comment| %>
-            <%= render 'comments', comment: comment, user: @user %>
+            <%= render 'comments', comment: comment%>
             <% end %>
     <% end %>
 </section>

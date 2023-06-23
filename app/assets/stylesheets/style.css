@@ -1,10 +1,10 @@
 :root {
-  --primary: #f8ede3;
-  --primary-light: #f9f1e9;
-  --secondary: #635f5b;
-  --secondary-tint: #958e88;
-  --tertiary: #85586f;
-  --tertiary-lightest: #b69ba9;
+  --primary: #181823;
+  --primary-light: #74747b;
+  --secondary: #537fe7;
+  --secondary-tint: #baccf5;
+  --tertiary: #c0eef2;
+  --tertiary-lightest: #ecfafb;
   --font-main-family:
     'Calibre',
     'Inter',
@@ -101,10 +101,12 @@ img {
   min-width: 100%;
   height: 100%;
   vertical-align: middle;
+  border: 1px solid var(--secondary);
+  border-radius: 5px;
 }
 
 img:hover {
-  transform: translateY(-3px);
+  border: 1px solid var(--tertiary);
 }
 
 .bio {

@@ -1,8 +1,8 @@
 require 'rails_helper'
 
-RSpec.describe 'Users', type: :request do
+RSpec.describe 'Posts', type: :request do
   describe 'GET /index' do
-    before(:example) { get users_path }
+    before(:example) { get('/users/96/posts') }
     it 'should return success status' do
       expect(response).to have_http_status(:ok)
     end
@@ -12,12 +12,12 @@ RSpec.describe 'Users', type: :request do
     end
 
     it 'should have a body' do
-      expect(response.body).to include('<h1>User Details</h1>')
+      expect(response.body).to include('This is my third post')
     end
   end
 
   describe 'GET /show' do
-    before(:example) { get('/users/1') }
+    before(:example) { get('/users/96/posts/108') }
     it 'should return success status' do
       expect(response).to have_http_status(:ok)
     end
@@ -27,7 +27,7 @@ RSpec.describe 'Users', type: :request do
     end
 
     it 'should have a body' do
-      expect(response.body).to include('<h1>Show user details</h1>')
+      expect(response.body).to include('Mancoba : Awesome!')
     end
   end
 end

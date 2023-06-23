@@ -1,6 +1,5 @@
 <section class="section">
 
-
 <% if @user.nil? %>
 <h4>User not found</h4>
 <% else %>
@@ -14,18 +13,15 @@
 </div>
 
 <ul>
-<% @posts.each_with_index do |post, index| %>
+<% @user.posts.each do |post| %>
   <li >
-  <%= render partial: 'users/post', locals: { post: post, index: index } %>
+  <%= render partial: 'users/post', locals: { post: post } %>
   <% if post.comments_counter > 0 %>
           <% post.five_most_recent_comments.each do |comment| %>
-            <%= render 'comments', comment: comment, user: @user %>
+            <%= render 'comments', comment: comment %>
             <% end %>
           <% end %>
   </li>
   <% end %>
 </ul>
-
-
-
 </section>
