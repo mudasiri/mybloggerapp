@@ -15,7 +15,7 @@ RSpec.feature 'Post new page', type: :feature do
   end
 
   scenario 'Clicking on add new post redirects to index page for posts' do
-    click_button 'Add Post'
+    click_button 'Add Post' 
     sleep(1)
     expect(current_path).to eq(user_posts_path(user_id: user_ids.last))
   end
