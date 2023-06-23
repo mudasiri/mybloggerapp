@@ -17,7 +17,9 @@ RSpec.describe 'Users', type: :request do
   end
 
   describe 'GET /show' do
-    before(:example) { get('/users/96') }
+
+    before(:example) { get('/users/14') }
+
     it 'should return success status' do
       expect(response).to have_http_status(:ok)
     end
@@ -26,7 +28,7 @@ RSpec.describe 'Users', type: :request do
       expect(response).to render_template(:show)
     end
 
-    it 'should have a body' do
+    it 'should have a button for pagination' do
       expect(response.body).to include('See all posts')
     end
   end
