@@ -32,7 +32,7 @@ RSpec.feature 'User show page', type: :feature do
   end
 
   scenario 'Clicking on a post title redirects to showing more more details about post page' do
-     click_on("Post ##{post.id}")
-     expect(current_path).to eq(user_posts_path(user_id: post.author_id, id: post.id))
-   end
+    click_on("Post ##{post.id}")
+    expect(current_path).to eq(user_posts_path(user_id: post.author_id, id: post.id))
+  end
 end
