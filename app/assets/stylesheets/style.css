@@ -36,11 +36,19 @@ body {
 }
 
 #header {
-  padding: 10px 25px;
-  width: 100%;
+  padding: 25px;
   height: 50px;
   background-color: var(--primary);
   opacity: 0.8;
+  display: flex;
+  justify-content: space-between;
+}
+
+.user-profile {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
 }
 
 main {
@@ -218,4 +226,31 @@ footer {
 
 ul > li {
   list-style: none;
+}
+
+.form {
+  border: 1px solid var(--secondary);
+  border-radius: var(--border-radius);
+  padding: 20px;
+  margin: 20px 0;
+  max-width: 300px;
+}
+
+form {
+  width: 100%;
+}
+
+label {
+  color: var(--secondary);
+  font-family: var(--font-mono-family);
+}
+
+input {
+  width: 100%;
+  min-height: 20px;
+}
+
+input[type='checkbox'] {
+  width: auto;
+  height: auto;
 }
