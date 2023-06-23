@@ -27,7 +27,7 @@ RSpec.describe 'Posts', type: :request do
     end
 
     it 'should have a body' do
-      expect(response.body).to include('Mancoba : Awesome!')
+      expect(response.body).to include('Mudasir : Awesome!')
     end
   end
 end

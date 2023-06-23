@@ -9,7 +9,7 @@ RSpec.feature 'Post show page', type: :feature do
   end
 
   scenario 'Displays post text and comments details' do
-    expect(page).to have_content('Mancoba : Well Done!')
+    expect(page).to have_content('Mudasir : Well Done!')
     expect(page).to have_content('This is my first post')
     expect(page).to have_content('Like')
     expect(page).to have_css('section', count: 1)
