@@ -26,7 +26,7 @@ RSpec.describe 'Users', type: :request do
       expect(response).to render_template(:show)
     end
 
-    it 'should have a body' do
+    it 'should have a button for pagination' do
       expect(response.body).to include('See all posts')
     end
   end
