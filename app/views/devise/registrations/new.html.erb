@@ -12,6 +12,8 @@
 
 <%= f.text_area :bio, required: true  %><br />
 
+<%= f.select :role, [["user", "user"], ["admin", "admin"]]%><br />
+
 <%= f.email_field :email, autofocus: true, autocomplete: "email", required: true %><br />
 
 <% if @minimum_password_length %>

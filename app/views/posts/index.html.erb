@@ -9,16 +9,40 @@
 <% end %>
 
 <div class="button">
-  <button type="button"><%= link_to 'Add New Post', new_user_post_path %></button>
+  <button type="button"><%= link_to 'add new post', new_user_post_path %></button>
 </div>
 
 <ul>
 <% @user.posts.each do |post| %>
   <li >
-  <%= render partial: 'users/post', locals: { post: post } %>
+  
+  <li class="post">
+  <h4 class="small-heading">
+    <%= link_to "Post ##{post.id}", user_post_path(post.author_id, post.id) %>
+  </h4>
+
+  <% if can? :destroy, post %>
+             <%= button_to 'delete post', user_post_path(post.author, post), method: :delete, data: { confirm: 'Are you sure?' } %>
+  <% end %>
+
+  <% if post.text.present? && post.text.length > 200 %>
+    <p><%= post.text.first(150)... %></p>
+  <% else %>
+    <p><%= post.text %></p>
+  <% end %>
+  <p class="comment-heading">Comments: <%= post.comments_counter%>, Likes: <%= post.likes_counter %></p>
+
+  <%= button_to 'More', user_post_path(post.author_id, post.id), method: :get %>
+
+</li>
+
   <% if post.comments_counter > 0 %>
           <% post.five_most_recent_comments.each do |comment| %>
-            <%= render 'comments', comment: comment %>
+            
+            <div class="comments-container">
+            <p class="comment"><%= comment.author.name %> : <%= comment.text %></p>
+          </div>
+
             <% end %>
           <% end %>
   </li>

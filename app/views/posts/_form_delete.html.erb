@@ -1,0 +1,3 @@
+<%= bootstrap_form_with(model: @post, url: "/users/#{@user.id}/posts/", layout: :horizontal, method: :delete ) do |form| %>
+    <%= form.button "Delete"%>
+<% end %>
