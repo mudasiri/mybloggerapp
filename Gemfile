@@ -79,3 +79,4 @@ end
 
 gem 'rubocop', '>= 1.0', '< 2.0'
 gem 'bootstrap_form'
+gem "devise", "~> 4.9"
