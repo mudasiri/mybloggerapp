@@ -121,6 +121,12 @@ To run the project, execute the following command:
 - Twitter: [@twitterhandle](https://twitter.com/KaboroLorna)
 - Linkedin [@linkedinprofile](https://www.linkedin.com/in/lorna-kaboro-23620b242/)
 
+  👤 **Lornakaboro**
+
+- GitHub: [@githubhandle](https://github.com/Lornakaboro)
+- Twitter: [@twitterhandle](https://twitter.com/KaboroLorna)
+- Linkedin [@linkedinprofile](https://www.linkedin.com/in/lorna-kaboro-23620b242/)
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 <!-- FUTURE FEATURES -->
 
