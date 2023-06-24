@@ -169,6 +169,7 @@ p {
 .button {
   display: flex;
   justify-content: center;
+  width: 90%;
 }
 
 .medium-heading {
@@ -233,7 +234,7 @@ ul > li {
   border-radius: var(--border-radius);
   padding: 20px;
   margin: 20px 0;
-  max-width: 300px;
+  width: 80%;
 }
 
 form {
