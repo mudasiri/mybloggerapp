@@ -234,7 +234,8 @@ ul > li {
   border-radius: var(--border-radius);
   padding: 20px;
   margin: 20px 0;
-  width: auto;
+  width: 100%;
+
 }
 
 form {
