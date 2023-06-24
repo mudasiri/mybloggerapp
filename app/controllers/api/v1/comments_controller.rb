@@ -1,7 +1,7 @@
 class Api::V1::CommentsController < ApplicationController
   before_action :set_post, only: %i[show update destroy]
 
-  # GET /users/:user_id/posts/:post_id/comments/id
+  # GET /users/:user_id/posts/:post_id/comments
   def index
     user = User.find(params[:user_id])
     post = user.posts.includes(:comments).find(params[:post_id])
