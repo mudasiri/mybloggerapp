@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-
+  mount Rswag::Ui::Engine => '/api-docs'
+  mount Rswag::Api::Engine => '/api-docs'
+  
   devise_for :users, path: '', path_names: {
     sign_in: 'login', sign_out: 'logout',
     password: 'secret', confirmation: 'verification',
@@ -28,4 +30,15 @@ Rails.application.routes.draw do
     end
   end
   
+  namespace :api do
+    namespace :v1 do
+      resources :users, only: [:index, :show] do 
+        resources :posts, only: [:index, :show, :new, :create, :destroy] do 
+          resources :comments, only: [:index,:new, :create, :destroy]
+          resources :likes, only: [:index, :create]
+        end
+      end
+    end
+  end
+
 end

@@ -79,7 +79,12 @@ group :test do
   gem 'webdrivers'
 end
 
+gem 'rubocop', '>= 1.0', '< 2.0'
 gem 'bootstrap_form'
 gem 'cancancan'
 gem 'devise', '~> 4.9'
-gem 'rubocop', '>= 1.0', '< 2.0'
+gem 'active_model_serializers'
+
+gem 'rswag'
+
+

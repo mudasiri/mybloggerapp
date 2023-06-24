@@ -46,6 +46,11 @@ GEM
       erubi (~> 1.4)
       rails-dom-testing (~> 2.0)
       rails-html-sanitizer (~> 1.1, >= 1.2.0)
+    active_model_serializers (0.10.13)
+      actionpack (>= 4.1, < 7.1)
+      activemodel (>= 4.1, < 7.1)
+      case_transform (>= 0.2)
+      jsonapi-renderer (>= 0.1.1.beta1, < 0.3)
     activejob (7.0.5)
       activesupport (= 7.0.5)
       globalid (>= 0.3.6)
@@ -87,6 +92,8 @@ GEM
       rack-test (>= 0.6.3)
       regexp_parser (>= 1.5, < 3.0)
       xpath (~> 3.2)
+    case_transform (0.2)
+      activesupport
     concurrent-ruby (1.2.2)
     crass (1.0.6)
     date (3.3.3)
@@ -115,6 +122,9 @@ GEM
       actionview (>= 5.0.0)
       activesupport (>= 5.0.0)
     json (2.6.3)
+    json-schema (3.0.0)
+      addressable (>= 2.8)
+    jsonapi-renderer (0.2.2)
     launchy (2.5.2)
       addressable (~> 2.8)
     letter_opener (1.8.1)
@@ -215,6 +225,20 @@ GEM
       rspec-mocks (~> 3.12)
       rspec-support (~> 3.12)
     rspec-support (3.12.0)
+    rswag (2.9.0)
+      rswag-api (= 2.9.0)
+      rswag-specs (= 2.9.0)
+      rswag-ui (= 2.9.0)
+    rswag-api (2.9.0)
+      railties (>= 3.1, < 7.1)
+    rswag-specs (2.9.0)
+      activesupport (>= 3.1, < 7.1)
+      json-schema (>= 2.2, < 4.0)
+      railties (>= 3.1, < 7.1)
+      rspec-core (>= 2.14)
+    rswag-ui (2.9.0)
+      actionpack (>= 3.1, < 7.1)
+      railties (>= 3.1, < 7.1)
     rubocop (1.52.0)
       json (~> 2.3)
       parallel (~> 1.10)
@@ -277,6 +301,7 @@ PLATFORMS
   x64-mingw-ucrt
 
 DEPENDENCIES
+  active_model_serializers
   bootsnap
   bootstrap_form
   cancancan
@@ -291,6 +316,7 @@ DEPENDENCIES
   rails (~> 7.0.5)
   rails-controller-testing
   rspec-rails (~> 6.0, >= 6.0.1)
+  rswag
   rubocop (>= 1.0, < 2.0)
   selenium-webdriver
   sprockets-rails
